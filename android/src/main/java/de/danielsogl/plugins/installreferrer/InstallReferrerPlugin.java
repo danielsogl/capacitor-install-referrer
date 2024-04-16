@@ -8,6 +8,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "InstallReferrer")
 public class InstallReferrerPlugin extends Plugin {
+
     private InstallReferrer implementation = new InstallReferrer();
 
     @PluginMethod
