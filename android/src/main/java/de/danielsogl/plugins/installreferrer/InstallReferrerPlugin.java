@@ -8,15 +8,18 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "InstallReferrer")
 public class InstallReferrerPlugin extends Plugin {
-
     private InstallReferrer implementation = new InstallReferrer();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void getReferrerDetails(PluginCall call) {
+        call.setKeepAlive(true);
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+        try {
+            JSObject resolveData = implementation.getReferrerDetails(getContext());
+            call.resolve(resolveData);
+            call.release(getBridge());
+        } catch (Exception e) {
+            call.reject(e.getMessage());
+        }
     }
 }

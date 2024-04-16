@@ -1,13 +1,15 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { InstallReferrerPlugin } from './definitions';
+import type {
+  InstallReferrerPlugin,
+  InstallReferrerPluginResult,
+} from './definitions';
 
 export class InstallReferrerWeb
   extends WebPlugin
   implements InstallReferrerPlugin
 {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  public getReferrerDetails(): Promise<InstallReferrerPluginResult> {
+    throw this.unimplemented('Not implemented on web');
   }
 }

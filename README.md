@@ -13,25 +13,35 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`getReferrerDetails()`](#getreferrerdetails)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### getReferrerDetails()
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+getReferrerDetails() => Promise<InstallReferrerPluginResult>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
-
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#installreferrerpluginresult">InstallReferrerPluginResult</a>&gt;</code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### InstallReferrerPluginResult
+
+| Prop                            | Type                 |
+| ------------------------------- | -------------------- |
+| **`referrerUrl`**               | <code>string</code>  |
+| **`referrerClickTime`**         | <code>number</code>  |
+| **`appInstallTime`**            | <code>number</code>  |
+| **`instantExperienceLaunched`** | <code>boolean</code> |
 
 </docgen-api>

@@ -1,3 +1,10 @@
 export interface InstallReferrerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getReferrerDetails(): Promise<InstallReferrerPluginResult>;
+}
+
+export interface InstallReferrerPluginResult {
+  referrerUrl?: string;
+  referrerClickTime?: number;
+  appInstallTime?: number;
+  instantExperienceLaunched?: boolean;
 }
