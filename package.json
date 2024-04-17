@@ -45,7 +45,7 @@
     "@capacitor/core": "^6.0.0",
     "@capacitor/docgen": "^0.2.2",
     "@ionic/eslint-config": "^0.3.0",
-    "@ionic/prettier-config": "^1.0.1",
+    "@ionic/prettier-config": "^4.0.0",
     "eslint": "^7.11.0",
     "husky": "^9.0.11",
     "is-ci": "^3.0.1",
